@@ -11,9 +11,9 @@
 var obj=new Date();
 var Da=(obj.getDate());
         var d = (obj.getDay());
-        var m = (obj.getMonth()+1);
+        var m = (obj.getMonth())+1;
         var y = (obj.getFullYear());
-        var mn=(obj.getMonth());
+        var mn=(obj.getMonth()+1);
          m=(m<10)?"0"+m:m;
         Da = (Da < 10) ? "0" + Da : Da;
         d = (d == 0) ? "Sunday":d
@@ -23,18 +23,18 @@ var Da=(obj.getDate());
         d = (d == 4) ? "Thurday"  : d
         d = (d == 5) ? "Friday"  : d
         d = (d == 6) ? "Saturday" : d
-        m = (m == 0) ? "January" : m
-        m = (m == 1) ? "February"  : m
-        m = (m == 2) ? "March": m
-        m = (m == 3) ? "April" : m
-        m = (m == 4) ? "May" : m
-        m = (m == 5) ? "June"  : m
-        m = (m == 6) ? "July" : m
-        m = (m == 7) ? "August"  : m
-        m = (m == 8) ? "September"  : m
-        m = (m == 9) ? "October" : m
-        m = (m == 10) ? "November" : m
-        m = (m == 11) ? "December" : m
+        m = (m == 1) ? "January" : m
+        m = (m == 2) ? "February"  : m
+        m = (m == 3) ? "March": m
+        m = (m == 4) ? "April" : m
+        m = (m == 5) ? "May" : m
+        m = (m == 6) ? "June"  : m
+        m = (m == 7) ? "July" : m
+        m = (m == 8) ? "August"  : m
+        m = (m == 9) ? "September"  : m
+        m = (m == 10) ? "October" : m
+        m = (m == 11) ? "November" : m
+        m = (m == 12) ? "December" : m
         var date=Da+"/"+mn+"/"+y+"<br>"+d+","+m+" "+y;
         document.getElementById("my").innerHTML=date;
 
