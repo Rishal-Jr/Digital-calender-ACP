@@ -5,42 +5,41 @@
         </title>
         </head>
         <body>
-<h1><center><div id="my" onload="showdate()"></div></h1></center>
-<h1 id="min"></h1>
+<center><h1><div id="my" onload="showdate()"></div></h1></center>
 <script>
     function showdate(){
 var obj=new Date();
 var Da=(obj.getDate());
-        var D = (obj.getDay());
-        var m = (obj.getMonth());
+        var d = (obj.getDay());
+        var m = (obj.getMonth()+1);
         var y = (obj.getFullYear());
         var mn=(obj.getMonth());
          m=(m<10)?"0"+m:m;
-         da= (da < 10) ? "0" + da : da;
-        d=(d==0)?"Monday"+d:d
-        d = (d == 1) ? "Tuesday" :d
-        d = (d == 2) ? "Wednesday" : d
-        d = (d == 3) ? "Thurday"  : d
-        d = (d == 4) ? "Friday"  : d
-        d = (d == 5) ? "Saturdy"  : d
-        d = (d == 6) ? "Sunday" : d
-        m = (m == 0) ? "January"  : m
-        m = (m == 0) ? "February": m
-        m = (m == 0) ? "March" : m
-        m = (m == 0) ? "April" : m
-        m = (m == 0) ? "May"  : m
-        m = (m == 0) ? "June" : m
-        m = (m == 0) ? "July"  : m
-        m = (m == 0) ? "August"  : m
-        m = (m == 0) ? "September" : m
-        m = (m == 0) ? "October" : m
-        m = (m == 0) ? "November" : m
-        m= (m == 11) ? "December" : m
-        var date=da+"/"+mn+"/"+y+"<br>"+d+","+m+" "+y;
-        document.getElementById("min").innerHTML=date;
+        Da = (Da < 10) ? "0" + Da : Da;
+        d = (d == 0) ? "Sunday":d
+        d = (d == 1) ? "Monday" :d
+        d = (d == 2) ? "Tuesday" : d
+        d = (d == 3) ? "Wednesday"  : d
+        d = (d == 4) ? "Thurday"  : d
+        d = (d == 5) ? "Friday"  : d
+        d = (d == 6) ? "Saturday" : d
+        m = (m == 0) ? "January" : m
+        m = (m == 1) ? "February"  : m
+        m = (m == 2) ? "March": m
+        m = (m == 3) ? "April" : m
+        m = (m == 4) ? "May" : m
+        m = (m == 5) ? "June"  : m
+        m = (m == 6) ? "July" : m
+        m = (m == 7) ? "August"  : m
+        m = (m == 8) ? "September"  : m
+        m = (m == 9) ? "October" : m
+        m = (m == 10) ? "November" : m
+        m = (m == 11) ? "December" : m
+        var date=Da+"/"+mn+"/"+y+"<br>"+d+","+m+" "+y;
+        document.getElementById("my").innerHTML=date;
 
     }
-    showdate()
+    showdate();
     </script>
     </body>
     </html>
